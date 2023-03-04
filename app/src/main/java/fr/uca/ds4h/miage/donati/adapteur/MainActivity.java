@@ -33,11 +33,11 @@ public class MainActivity extends AppCompatActivity implements PersonneListener 
     //Méthode de callback associé à l'écouteur de personnes
     @Override
     public void onClickNom(Personne item, int position) {
-        AlertDialog.Builder dlg = new AlertDialog.Builder(this);
-        dlg.setTitle("Personne");
-        dlg.setMessage("Vous avez clique sur : " + item.getNom());
-        dlg.setPositiveButton("Oui", null);
-        dlg.setNegativeButton("Non", null);
+        AlertDialog.Builder dlg = new AlertDialog.Builder(this)
+                .setTitle("Personne")
+                .setMessage("Vous avez clique sur : " + item.getNom())
+                .setPositiveButton("Oui", null)
+                .setNegativeButton("Non", null);
         dlg.show();
     }
 }
